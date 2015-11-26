@@ -11,7 +11,6 @@ class HelloActor extends Actor {
   def receive = {
     case "hello" => println(s"hello back to $sender")
     case x => println(s"unexpected greeting $x -- $sender")
-    //       (other ? msg) pipeTo sender()
   }
 }
 
@@ -27,24 +26,18 @@ class HelloFromActor(val name: String) extends Actor {
       Thread sleep 3000
       sender ! msg
     }
-    //       (other ? msg) pipeTo sender()
   }
 }
 
 object HelloActor {
-
   def main(args: Array[String]) {
     implicit val ___some_sort_of_timeout = Timeout(3 seconds)
     val system = ActorSystem("HelloSystem")
     implicit val inbox: Inbox = Inbox.create(system)
-    // implicit val i = inbox()
-    // val helloActor = system.actorOf(Props[HelloActor], name = "helloactor")
-    // val helloActor = system.actorOf(Props(new HelloFromActor("johny")), name = "hellofromactor")
     val helloActor = system.actorOf(Props(classOf[HelloFromActor], "johny"), name = "hellofromactor")
     helloActor ! "hello"
     val f = (helloActor ? "balls").mapTo[String]
     val v = Await.result(f, ___some_sort_of_timeout.duration)  // timeout needed again?!?
     println(s"from main: $v")
   }
-
 }
