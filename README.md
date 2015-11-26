@@ -1,7 +1,5 @@
-Tech|algo|data structure playground
+Tech/algo/data structure playground
 ===================================
-
-Includes:
 
 python:
 * algos - algorithms
