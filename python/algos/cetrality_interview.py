@@ -39,6 +39,7 @@ def droppedRequests__my_solution(requestTime):
     - no more than 20 reqs/10sec
     - no more than 60 reqs/60sec
     ...NOTE: dropped requests count towards above quotas
+    https://leetcode.com/discuss/interview-question/819577/Throttling-Gateway-Hackerrank
     """
     import collections
     sec_counts = collections.OrderedDict({i: requestTime.count(i) for i in requestTime})
