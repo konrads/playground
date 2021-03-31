@@ -11,7 +11,7 @@ def count_chars(s):
     for c in re.sub(r'\s', r'', s):
         d[c] += 1
     for c in sorted(d):
-        print c, d[c]
+        print(c, d[c])
 
 
 count_chars("this is 1 string of text")
@@ -35,6 +35,6 @@ def t_avg(t1, t2):
     return '%02d:%02d:%02d' % (mm, ss, hs)
 
 
-print t_avg("00:02:20", "00:04:40")
-print t_avg("01:02:20", "00:04:40")
-print t_avg("03:03:30", "01:01:10")
+print(t_avg("00:02:20", "00:04:40"))
+print(t_avg("01:02:20", "00:04:40"))
+print(t_avg("03:03:30", "01:01:10"))

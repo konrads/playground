@@ -47,7 +47,7 @@ if __name__ == '__main__':
     }
 
     def print_names(x):
-        print x.name
+        print(x.name)
 
     btree = Btree.create(raw_btree)
     Btree.traverse(btree, print_names)
