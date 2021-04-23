@@ -5,3 +5,6 @@ mod variance;
 mod linked_list;
 mod interview_qs;
 mod fizzbuzz;
+mod enjin;
+mod acala;
+mod borrow_and_move;

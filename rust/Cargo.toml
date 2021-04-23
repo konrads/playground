@@ -10,3 +10,19 @@ edition = "2018"
 log = "0.4"
 itertools = "0.10.0"
 regex = "1.4.5"
+
+[[bin]]
+name = "enjin_ex1"
+path = "src/enjin/ex1.rs"
+
+[[bin]]
+name = "enjin_ex2"
+path = "src/enjin/ex2.rs"
+
+[[bin]]
+name = "enjin_ex3"
+path = "src/enjin/ex3.rs"
+
+[[bin]]
+name = "enjin_ex4"
+path = "src/enjin/ex4.rs"
