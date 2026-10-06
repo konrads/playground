@@ -1,0 +1,2 @@
+//! Message normaliser and router. Parse inbound messages from two or three formats (e.g. JSON, a key-value text protocol, a length-prefixed format) into one canonical struct, then route by rules (tenant, channel, priority).
+//! This tests parsing robustness: malformed input, missing fields, Unicode, and returning Result instead of panicking. It maps to "message routing and protocol translation across channels."

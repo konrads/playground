@@ -2,7 +2,7 @@
 name = "excercises"
 version = "0.1.0"
 authors = ["Konrad Sosnowski <konrad.sosnowski@ubnt.com>"]
-edition = "2018"
+edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -10,6 +10,8 @@ edition = "2018"
 log = "0.4"
 itertools = "0.10.0"
 regex = "1.4.5"
+serde = "1.0.229"
+serde_json = "1.0.151"
 
 [[bin]]
 name = "enjin_ex1"
@@ -26,3 +28,10 @@ path = "src/enjin/ex3.rs"
 [[bin]]
 name = "enjin_ex4"
 path = "src/enjin/ex4.rs"
+
+[dev-dependencies]
+criterion = "0.8.2"
+
+[[bench]]
+name = "smallest_missing"
+harness = false
