@@ -1,2 +1,0 @@
-//! Permission inheritance on a graph. Given an org hierarchy or group-membership graph (nodes are users, groups, and tenants), answer can_access(user, resource) where permissions inherit through groups.
-//! This tests BFS/DFS, cycle detection, and memoisation for repeated queries.  The hidden tests usually include a cycle and a deep chain that overflows the stack if you recurse. It maps to graph DBs and authorisation.

@@ -40,6 +40,7 @@ fn solution(t: &mut Vec<i32>, c: &mut Vec<i32>, w: i32, k: i32) -> i32 {
         //     window.pop_front();
         // }
 
+        // trim the window if needed
         loop {
             let time_since_first_w = window
                 .front()
